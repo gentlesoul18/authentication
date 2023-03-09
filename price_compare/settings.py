@@ -39,6 +39,7 @@ ALLOWED_HOSTS = [
     "0.0.0.0",
     "localhost",
     "127.0.0.1",
+    "http://allomejo.up.railway.app"
     "https://allomejo.up.railway.app/",
 ]
 
