@@ -111,8 +111,8 @@ DATABASES = {
         "NAME": "railway",
         "USER": os.environ.get("USER"),
         "PASSWORD": os.environ.get("PASSWORD"),
-        "HOST": "containers-us-west-54.railway.app",
-        "PORT": "7408",
+        "HOST": "containers-us-west-113.railway.app",
+        "PORT": "6798",
     }
 }
 
@@ -122,7 +122,7 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
         "rest_framework.authentication.BasicAuthentication",
     ),
-    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated"),
+    # "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.AllowAny"),
 }
 
 
