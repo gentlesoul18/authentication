@@ -108,11 +108,11 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'scoutvendor',
-        'USER': 'scoutvendoradmin',
-        'PASSWORD': 'scoutvendoradmin',
-        'HOST': 'localhost',
-        'PORT': 5432
+        'NAME': 'railway',
+        'USER': os.environ.get('USER'),
+        'PASSWORD': os.environ.get('PASSWORD'),
+        'HOST': 'containers-us-west-54.railway.app',
+        'PORT': "7408"
     }
     
 }
