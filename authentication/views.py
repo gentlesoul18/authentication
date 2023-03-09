@@ -5,7 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
-from three60.mixins import ApiErrorsMixin, ApiAuthMixin, PublicApiMixin
+from price_compare.mixins import ApiErrorsMixin, ApiAuthMixin, PublicApiMixin
 from authentication.services import (
     user_get_or_create,
     google_get_user_info,

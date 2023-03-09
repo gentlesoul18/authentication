@@ -5,7 +5,7 @@ from django.core.exceptions import ValidationError
 from django.conf import settings
 from django.http import HttpResponse
 from django.db import transaction
-from three60.utils import get_now, PlainValidationError
+from price_compare.utils import get_now, PlainValidationError
 from authentication.models import User
 import requests
 

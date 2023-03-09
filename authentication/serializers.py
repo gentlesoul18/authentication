@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from three60.utils import PlainValidationError
+from price_compare.utils import PlainValidationError
 from .models import User
 
 
