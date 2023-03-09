@@ -34,8 +34,7 @@ SITE_ID = 1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'scoutvendorapi.herokuapp.com']
-
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'https://allomejo.up.railway.app/']
 
 # Application definition
 
@@ -52,11 +51,9 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt",
     "corsheaders",
     'whitenoise.runserver_nostatic',
-    'gmailapi_backend',
+    
     # local apps
-    "accounts",
-    "products",
-    "watchlist",
+    "authentication",
 ]
 
 MIDDLEWARE = [
@@ -116,8 +113,6 @@ DATABASES = {
     
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
 
 
 REST_FRAMEWORK = {
@@ -156,7 +151,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 ## CUSTOM USER MODEL
-AUTH_USER_MODEL = "accounts.User"
+AUTH_USER_MODEL = "authentication.User"
 
 
 
@@ -193,7 +188,7 @@ CORS_ALLOW_CREDENTIALS = True
 
 
 
-EMAIL_BACKEND = 'gmailapi_backend.mail.GmailBackend'
-GMAIL_API_CLIENT_ID = os.environ["GMAIL_API_CLIENT_ID"]
-GMAIL_API_CLIENT_SECRET = os.environ["GMAIL_API_CLIENT_SECRET"]
-GMAIL_API_REFRESH_TOKEN = os.environ["GMAIL_API_REFRESH_TOKEN"]
+# EMAIL_BACKEND = 'gmailapi_backend.mail.GmailBackend'
+# GMAIL_API_CLIENT_ID = os.environ["GMAIL_API_CLIENT_ID"]
+# GMAIL_API_CLIENT_SECRET = os.environ["GMAIL_API_CLIENT_SECRET"]
+# GMAIL_API_REFRESH_TOKEN = os.environ["GMAIL_API_REFRESH_TOKEN"]
