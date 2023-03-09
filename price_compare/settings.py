@@ -13,7 +13,6 @@ from dotenv import load_dotenv
 from pathlib import Path
 
 import os
-import dj_database_url
 
 load_dotenv()
 
