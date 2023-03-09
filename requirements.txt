@@ -18,6 +18,7 @@ djangorestframework==3.13.1
 djangorestframework-simplejwt==5.2.0
 filelock==3.7.1
 hyperlink==21.0.0
+gunicorn==20.1.0
 idna==3.3
 incremental==21.3.0
 itemadapter==0.7.0
