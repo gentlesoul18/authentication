@@ -3,12 +3,9 @@ from price_compare.utils import PlainValidationError
 from .models import User
 
 
-class InputSerializer(serializers.Serializer):
-    code = serializers.CharField(required=True)
-
-    class Meta:
-        pass
-          
+class SocialLoginSerializer(serializers.Serializer):
+    """Handles serialization of social logins related data"""
+    auth_token = serializers.CharField()
 
 class RegisterSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
